@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+   <com.google.android.material.appbar.AppBarLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+android:fitsSystemWindows="true">
+       <com.google.android.material.appbar.CollapsingToolbarLayout
+           android:id="@+id/collapse"
+           android:layout_width="match_parent"
+           android:layout_height="380dp"
+           android:fitsSystemWindows="true"
+           android:background="@drawable/background3"
+           app:layout_scrollFlags="scroll|exitUntilCollapsed"
+           app:contentScrim="?colorPrimary">
+
+               <RelativeLayout
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:layout_gravity="center_horizontal"
+                   >
+
+                   <ImageView
+                       android:background="@drawable/border"
+                       android:id="@+id/img_background"
+                       android:layout_width="200dp"
+                       android:adjustViewBounds="true"
+                       android:scaleType="fitXY"
+                       android:layout_marginTop="50dp"
+                       android:layout_marginStart="50dp"
+                       android:layout_marginEnd="50dp"
+                       android:layout_height="250dp"
+                       android:src="@drawable/ic_intern" />
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="KHUSHI"
+                       android:textColor="@color/black"
+                       android:textSize="20sp"
+                       android:padding="10dp"
+                       android:layout_marginTop="-35dp"
+                       android:layout_marginStart="100dp"
+                       android:layout_marginEnd="100dp"
+                       android:background="@drawable/neumophism"
+                       android:layout_below="@+id/img_background"
+                       />
+
+               </RelativeLayout>
+
+
+           <androidx.appcompat.widget.Toolbar
+               android:id="@+id/toolbar1"
+               android:layout_width="match_parent"
+               android:layout_height="?actionBarSize"
+               app:titleTextColor="@color/colorPrimary"
+               app:layout_collapseMode="parallax"
+               app:title="MY PROFILE"
+               app:popupTheme="@style/ThemeOverlay.AppCompat.Dark">
+           </androidx.appcompat.widget.Toolbar>
+
+
+
+       </com.google.android.material.appbar.CollapsingToolbarLayout>
+   </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:background="@color/colorPrimary"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical">
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                ​<LinearLayout
+                    android:id="@+id/cell_content_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="140dp"
+                    android:background="@color/blue"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="140dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="AGE : 21"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:text="ZODIAC SIGN : Sagittarius"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+                ​
+                <LinearLayout
+                    android:id="@+id/cell_title_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_myself"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="KHUSHI SHARMA"/>
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+                android:layout_marginBottom="5dp">
+
+                ​<LinearLayout
+                android:id="@+id/cell_content_view1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="I am a student still studing"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="I want to learn new things"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+                ​
+                <LinearLayout
+                    android:id="@+id/cell_title_view1"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_school"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textColor="@color/black"
+                        android:text="STUDENT"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        />
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp">
+                ​<LinearLayout
+                android:id="@+id/cell_content_view2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Currently pursuing MBA"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="Studied at FFSOC"/>
+
+                </LinearLayout>
+            </LinearLayout>
+                ​
+                <LinearLayout
+                    android:id="@+id/cell_title_view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_work"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="UNIVERSITY OF PALI"/>
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp">
+
+                ​​<LinearLayout
+                android:id="@+id/cell_content_view3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="I love learning new things and exploring myself"/>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text="I am a bit short tempered also at the same time caring and loving"/>
+
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cell_title_view3"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_aboutme"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="ABOUT ME"/>
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp">
+
+                ​<LinearLayout
+                android:id="@+id/cell_content_view4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:text=" World Music\n WildLife Enthusiast\n Food Lover\n Lazy"/>
+
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cell_title_view4"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_passion"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="INTERESTS"/>
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+
+            <com.ramotion.foldingcell.FoldingCell
+                android:id="@+id/folding_cell5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="15dp"
+                android:layout_marginStart="15dp"
+                android:layout_marginBottom="5dp">
+
+                ​<LinearLayout
+                android:id="@+id/cell_content_view5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="170dp"
+                    android:orientation="vertical">
+                    <HorizontalScrollView
+                    android:layout_width="wrap_content"
+                    android:layout_height="140dp"
+                    android:fillViewport="true"
+                        android:padding="20dp"
+                    android:measureAllChildren="false"
+                    android:scrollbars="none"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="140dp"
+                        android:background="@color/blue"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/image1"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:focusable="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image1"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/image2"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:focusable="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image2"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/image3"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:focusable="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image3"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/image4"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:focusable="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image4"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                        <ImageView
+                            android:adjustViewBounds="true"
+                            android:id="@+id/image5"
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:focusable="false"
+                            android:scaleType="fitXY"
+                            android:src="@drawable/image5"
+                            android:layout_marginStart="20dp"
+                            android:layout_gravity="center_vertical"
+                            />
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                </LinearLayout>
+            </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/cell_title_view5"
+                    android:layout_width="match_parent"
+                    android:layout_height="70dp"
+                    android:background="@drawable/neumophism"
+                    android:orientation="horizontal">
+                    <ImageView
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:src="@drawable/ic_photo"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:text="MY PHOTOS"/>
+
+                </LinearLayout>
+                ​
+            </com.ramotion.foldingcell.FoldingCell>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:fabSize="normal"
+        android:layout_gravity="end|bottom"
+        android:elevation="70dp"
+        android:layout_marginBottom="20dp"
+        android:layout_marginEnd="10dp"/>
+
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
